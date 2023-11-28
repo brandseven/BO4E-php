@@ -6,8 +6,8 @@ class JsonToPHPCodeGenerator {
 	public const BO4E_NAMESPACE_COM = 'Com';
 	public const BO4E_NAMESPACE_ENUM = 'Enum';
 
-	private string $srcPath = '';
-	private string $schemasPath = '';
+	private string $srcPath;
+	private string $schemasPath;
 
 	public function __construct(string $srcPath, string $schemasPath) {
 		$this->srcPath = $srcPath;
@@ -15,28 +15,30 @@ class JsonToPHPCodeGenerator {
 	}
 
 	public function generate(): void {
-		$this->removeDir("{$this->srcPath}");
-		mkdir("{$this->srcPath}");
+		$targetPath = "{$this->srcPath}/".self::BO4E_NAMESPACE;
+
+		$this->removeDir($targetPath);
+		mkdir($targetPath);
 
 		// BO
 		$this->generateClasses(
 			self::BO4E_NAMESPACE,
 			"{$this->schemasPath}/bo",
-			"{$this->srcPath}"
+			$targetPath
 		);
 
 		// COM
 		$this->generateClasses(
 			self::BO4E_NAMESPACE.'\\'.self::BO4E_NAMESPACE_COM,
 			"{$this->schemasPath}/com",
-			"{$this->srcPath}/Com"
+			"{$targetPath}/Com"
 		);
 
 		// ENUM
 		$this->generateEnums(
 			self::BO4E_NAMESPACE.'\\'.self::BO4E_NAMESPACE_ENUM,
 			"{$this->schemasPath}/enum",
-			"{$this->srcPath}/Enum"
+			"{$targetPath}/Enum"
 		);
 	}
 
