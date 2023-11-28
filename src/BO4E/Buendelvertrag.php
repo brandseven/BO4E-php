@@ -26,8 +26,8 @@ class Buendelvertrag {
 	/** @var \BO4E\Com\Unterschrift[] */
 	public ?array $unterzeichnervp2 = null;
 	public ?\BO4E\Enum\Vertragsart $vertragsart = null;
-	public ?string $vertragsbeginn = null;
-	public ?string $vertragsende = null;
+	public ?\Datetime $vertragsbeginn = null;
+	public ?\Datetime $vertragsende = null;
 	/** @var \BO4E\Com\Vertragskonditionen[] */
 	public ?array $vertragskonditionen = null;
 	public ?string $vertragsnummer = null;

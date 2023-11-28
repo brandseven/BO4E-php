@@ -16,7 +16,7 @@ class Rechnung {
 	public ?string $_version = '0.6.1rc14';
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
-	public ?string $faelligkeitsdatum = null;
+	public ?\Datetime $faelligkeitsdatum = null;
 	public ?\BO4E\Com\Betrag $gesamtbrutto = null;
 	public ?\BO4E\Com\Betrag $gesamtnetto = null;
 	public ?\BO4E\Com\Betrag $gesamtsteuer = null;
@@ -29,7 +29,7 @@ class Rechnung {
 	public ?\BO4E\Enum\NetznutzungRechnungstyp $netznutzungrechnungstyp = null;
 	public ?string $originalRechnungsnummer = null;
 	public ?\BO4E\Com\Betrag $rabattBrutto = null;
-	public ?string $rechnungsdatum = null;
+	public ?\Datetime $rechnungsdatum = null;
 	public ?\BO4E\Geschaeftspartner $rechnungsempfaenger = null;
 	public ?\BO4E\Geschaeftspartner $rechnungsersteller = null;
 	public ?string $rechnungsnummer = null;

@@ -16,7 +16,7 @@ class Fremdkostenposition {
 	public ?string $artikelbezeichnung = null;
 	public ?string $artikeldetail = null;
 	public ?\BO4E\Com\Betrag $betragKostenposition = null;
-	public ?string $bis = null;
+	public ?\Datetime $bis = null;
 	public ?\BO4E\Com\Preis $einzelpreis = null;
 	public ?string $gebietcodeEic = null;
 	public ?string $linkPreisblatt = null;
@@ -24,7 +24,7 @@ class Fremdkostenposition {
 	public ?string $marktpartnername = null;
 	public ?\BO4E\Com\Menge $menge = null;
 	public ?string $positionstitel = null;
-	public ?string $von = null;
+	public ?\Datetime $von = null;
 	public ?\BO4E\Com\Menge $zeitmenge = null;
 
 }

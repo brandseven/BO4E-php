@@ -17,8 +17,8 @@ class Rechnungsposition {
 	public ?string $artikelId = null;
 	public ?\BO4E\Enum\BDEWArtikelnummer $artikelnummer = null;
 	public ?\BO4E\Com\Preis $einzelpreis = null;
-	public ?string $lieferungBis = null;
-	public ?string $lieferungVon = null;
+	public ?\Datetime $lieferungBis = null;
+	public ?\Datetime $lieferungVon = null;
 	public ?string $lokationsId = null;
 	public ?\BO4E\Com\Menge $positionsMenge = null;
 	public ?integer $positionsnummer = null;

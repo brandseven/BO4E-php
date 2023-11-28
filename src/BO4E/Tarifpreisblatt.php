@@ -16,7 +16,7 @@ class Tarifpreisblatt {
 	public ?string $_version = '0.6.1rc14';
 	public ?\BO4E\Marktteilnehmer $anbieter = null;
 	public ?string $anbietername = null;
-	public ?string $anwendungVon = null;
+	public ?\Datetime $anwendungVon = null;
 	public ?string $bemerkung = null;
 	public ?\BO4E\Com\Tarifberechnungsparameter $berechnungsparameter = null;
 	public ?string $bezeichnung = null;
@@ -26,7 +26,7 @@ class Tarifpreisblatt {
 	/** @var \BO4E\Enum\Kundentyp[] */
 	public ?array $kundentypen = null;
 	public ?\BO4E\Com\Preisgarantie $preisgarantie = null;
-	public ?string $preisstand = null;
+	public ?\Datetime $preisstand = null;
 	public ?\BO4E\Enum\Registeranzahl $registeranzahl = null;
 	public ?\BO4E\Enum\Sparte $sparte = null;
 	/** @var \BO4E\Com\AufAbschlag[] */

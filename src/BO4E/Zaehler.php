@@ -15,13 +15,13 @@ class Zaehler {
 	public ?\BO4E\Enum\Typ $_typ = \BO4E\Enum\Typ::ZAEHLER;
 	public ?string $_version = '0.6.1rc14';
 	public ?\BO4E\Enum\Befestigungsart $befestigungsart = null;
-	public ?string $eichungBis = null;
+	public ?\Datetime $eichungBis = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
 	/** @var \BO4E\Geraet[] */
 	public ?array $geraete = null;
 	public ?boolean $istFernschaltbar = null;
-	public ?string $letzteEichung = null;
+	public ?\Datetime $letzteEichung = null;
 	public ?\BO4E\Enum\Messwerterfassung $messwerterfassung = null;
 	public ?\BO4E\Enum\Registeranzahl $registeranzahl = null;
 	public ?\BO4E\Enum\Sparte $sparte = null;

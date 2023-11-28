@@ -19,9 +19,9 @@ class Zeitraum {
 	public ?string $_version = '0.6.1rc14';
 	public ?number $dauer = null;
 	public ?\BO4E\Enum\Zeiteinheit $einheit = null;
-	public ?string $enddatum = null;
-	public ?string $endzeitpunkt = null;
-	public ?string $startdatum = null;
-	public ?string $startzeitpunkt = null;
+	public ?\Datetime $enddatum = null;
+	public ?\Datetime $endzeitpunkt = null;
+	public ?\Datetime $startdatum = null;
+	public ?\Datetime $startzeitpunkt = null;
 
 }

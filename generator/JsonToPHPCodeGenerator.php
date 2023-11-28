@@ -78,6 +78,7 @@ class JsonToPHPCodeGenerator {
 				if (isset($determinedType['description'])) {
 					$phpDefinition[] = "\t/** @var {$determinedType['description']} */";
 				}
+
 				$phpDefinition[] = "\tpublic ?{$determinedType['type']} \${$key} = {$default};";
 			}
 
@@ -165,6 +166,12 @@ class JsonToPHPCodeGenerator {
 			return [
 				'type' => 'array',
 				'description' => "{$itemType['type']}[]",
+			];
+		}
+
+		if ($typeDefinition['type'] === 'string' && ($typeDefinition['format'] ?? '') === 'date-time') {
+			return [
+				'type' => '\Datetime',
 			];
 		}
 

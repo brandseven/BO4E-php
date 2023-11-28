@@ -13,7 +13,7 @@ class Unterschrift {
 
 	public ?string $_id = null;
 	public ?string $_version = '0.6.1rc14';
-	public ?string $datum = null;
+	public ?\Datetime $datum = null;
 	public ?string $name = null;
 	public ?string $ort = null;
 

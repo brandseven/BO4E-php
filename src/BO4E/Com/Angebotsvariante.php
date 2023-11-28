@@ -14,8 +14,8 @@ class Angebotsvariante {
 	public ?string $_id = null;
 	public ?string $_version = '0.6.1rc14';
 	public ?\BO4E\Enum\Angebotsstatus $angebotsstatus = null;
-	public ?string $bindefrist = null;
-	public ?string $erstellungsdatum = null;
+	public ?\Datetime $bindefrist = null;
+	public ?\Datetime $erstellungsdatum = null;
 	public ?\BO4E\Com\Betrag $gesamtkosten = null;
 	public ?\BO4E\Com\Menge $gesamtmenge = null;
 	/** @var \BO4E\Com\Angebotsteil[] */

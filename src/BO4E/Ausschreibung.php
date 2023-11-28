@@ -26,7 +26,7 @@ class Ausschreibung {
 	public ?boolean $istKostenpflichtig = null;
 	/** @var \BO4E\Com\Ausschreibungslos[] */
 	public ?array $lose = null;
-	public ?string $veroeffentlichungszeitpunkt = null;
+	public ?\Datetime $veroeffentlichungszeitpunkt = null;
 	public ?string $webseite = null;
 
 }

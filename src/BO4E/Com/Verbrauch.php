@@ -14,9 +14,9 @@ class Verbrauch {
 	public ?string $_id = null;
 	public ?string $_version = '0.6.1rc14';
 	public ?\BO4E\Enum\Mengeneinheit $einheit = null;
-	public ?string $enddatum = null;
+	public ?\Datetime $enddatum = null;
 	public ?string $obisKennzahl = null;
-	public ?string $startdatum = null;
+	public ?\Datetime $startdatum = null;
 	public ?number $wert = null;
 	public ?\BO4E\Enum\Wertermittlungsverfahren $wertermittlungsverfahren = null;
 

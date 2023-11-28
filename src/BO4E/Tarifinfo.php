@@ -17,7 +17,7 @@ class Tarifinfo {
 	public ?string $_version = '0.6.1rc14';
 	public ?\BO4E\Marktteilnehmer $anbieter = null;
 	public ?string $anbietername = null;
-	public ?string $anwendungVon = null;
+	public ?\Datetime $anwendungVon = null;
 	public ?string $bemerkung = null;
 	public ?string $bezeichnung = null;
 	public ?\BO4E\Com\Energiemix $energiemix = null;

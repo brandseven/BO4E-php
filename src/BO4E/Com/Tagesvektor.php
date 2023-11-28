@@ -13,7 +13,7 @@ class Tagesvektor {
 
 	public ?string $_id = null;
 	public ?string $_version = '0.6.1rc14';
-	public ?string $tag = null;
+	public ?\Datetime $tag = null;
 	/** @var \BO4E\Com\Zeitreihenwertkompakt[] */
 	public ?array $werte = null;
 

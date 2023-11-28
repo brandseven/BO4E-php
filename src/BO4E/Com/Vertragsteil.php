@@ -18,7 +18,7 @@ class Vertragsteil {
 	public ?\BO4E\Com\Menge $maximaleAbnahmemenge = null;
 	public ?\BO4E\Com\Menge $minimaleAbnahmemenge = null;
 	public ?\BO4E\Com\Menge $vertraglichFixierteMenge = null;
-	public ?string $vertragsteilbeginn = null;
-	public ?string $vertragsteilende = null;
+	public ?\Datetime $vertragsteilbeginn = null;
+	public ?\Datetime $vertragsteilende = null;
 
 }

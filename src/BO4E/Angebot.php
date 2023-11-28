@@ -18,11 +18,11 @@ class Angebot {
 	public ?\BO4E\Enum\Typ $_typ = \BO4E\Enum\Typ::ANGEBOT;
 	public ?string $_version = '0.6.1rc14';
 	public ?string $anfragereferenz = null;
-	public ?string $angebotsdatum = null;
+	public ?\Datetime $angebotsdatum = null;
 	public ?\BO4E\Geschaeftspartner $angebotsgeber = null;
 	public ?\BO4E\Geschaeftspartner $angebotsnehmer = null;
 	public ?string $angebotsnummer = null;
-	public ?string $bindefrist = null;
+	public ?\Datetime $bindefrist = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
 	public ?\BO4E\Enum\Sparte $sparte = null;

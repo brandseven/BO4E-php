@@ -16,8 +16,8 @@ class Messlokationszuordnung {
 	public ?string $_id = null;
 	public ?string $_version = '0.6.1rc14';
 	public ?\BO4E\Enum\ArithmetischeOperation $arithmetik = null;
-	public ?string $gueltigBis = null;
-	public ?string $gueltigSeit = null;
+	public ?\Datetime $gueltigBis = null;
+	public ?\Datetime $gueltigSeit = null;
 	public ?string $messlokationsId = null;
 
 }

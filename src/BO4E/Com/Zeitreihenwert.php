@@ -13,8 +13,8 @@ class Zeitreihenwert {
 
 	public ?string $_id = null;
 	public ?string $_version = '0.6.1rc14';
-	public ?string $datumUhrzeitBis = null;
-	public ?string $datumUhrzeitVon = null;
+	public ?\Datetime $datumUhrzeitBis = null;
+	public ?\Datetime $datumUhrzeitVon = null;
 	public ?\BO4E\Enum\Messwertstatus $status = null;
 	public ?\BO4E\Enum\Messwertstatuszusatz $statuszusatz = null;
 	public ?number $wert = null;
