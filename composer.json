@@ -1,0 +1,17 @@
+{
+	"name": "brandseven/bo4e-php",
+	"description": "PHP implementation of BO4E",
+	"minimum-stability": "stable",
+	"license": "mit",
+	"require": {
+		"php": ">=8.1",
+		"bo4e/schemas": "^0.1"
+	},
+	"repositories": [
+		{"type": "package", "package": {
+			"name": "bo4e/schemas", "version": "0.1",
+			"source": {"url": "https://github.com/Hochfrequenz/BO4E-Schemas.git", "type": "git", "reference": "main"},
+			"extra": {"asset-root": ""}
+		}}
+	]
+}
