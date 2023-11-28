@@ -3,6 +3,7 @@
 class JsonToPHPCodeGenerator {
 
 	public const BO4E_NAMESPACE = 'BO4E';
+	public const BO4E_NAMESPACE_BO = 'Bo';
 	public const BO4E_NAMESPACE_COM = 'Com';
 	public const BO4E_NAMESPACE_ENUM = 'Enum';
 
@@ -17,35 +18,30 @@ class JsonToPHPCodeGenerator {
 	public function generate(): void {
 		$targetPath = "{$this->srcPath}/".self::BO4E_NAMESPACE;
 
-		$this->removeDir($targetPath);
-		mkdir($targetPath);
-
 		// BO
 		$this->generateClasses(
-			self::BO4E_NAMESPACE,
-			"{$this->schemasPath}/bo",
-			$targetPath
+			self::BO4E_NAMESPACE.'\\'.self::BO4E_NAMESPACE_BO,
+			"{$this->schemasPath}/".strtolower(self::BO4E_NAMESPACE_BO),
+			"{$targetPath}/".self::BO4E_NAMESPACE_BO
 		);
 
 		// COM
 		$this->generateClasses(
 			self::BO4E_NAMESPACE.'\\'.self::BO4E_NAMESPACE_COM,
-			"{$this->schemasPath}/com",
-			"{$targetPath}/Com"
+			"{$this->schemasPath}/".strtolower(self::BO4E_NAMESPACE_COM),
+			"{$targetPath}/".self::BO4E_NAMESPACE_COM
 		);
 
 		// ENUM
 		$this->generateEnums(
 			self::BO4E_NAMESPACE.'\\'.self::BO4E_NAMESPACE_ENUM,
-			"{$this->schemasPath}/enum",
-			"{$targetPath}/Enum"
+			"{$this->schemasPath}/".strtolower(self::BO4E_NAMESPACE_ENUM),
+			"{$targetPath}/".self::BO4E_NAMESPACE_ENUM
 		);
 	}
 
 	private function generateClasses(string $nameSpace, string $srcPath, string $targetPath) {
-		if (realpath($targetPath) === false) {
-			mkdir($targetPath);
-		}
+		$this->cleanUpFolderForGenerator($targetPath);
 
 		$schemas = glob("{$srcPath}/*.json");
 		foreach ($schemas as $schema) {
@@ -92,9 +88,7 @@ class JsonToPHPCodeGenerator {
 	}
 
 	private function generateEnums(string $nameSpace, string $srcPath, string $targetPath) {
-		if (realpath($targetPath) === false) {
-			mkdir($targetPath);
-		}
+		$this->cleanUpFolderForGenerator($targetPath);
 
 		$schemas = glob("{$srcPath}/*.json");
 		foreach ($schemas as $schema) {
@@ -141,6 +135,11 @@ class JsonToPHPCodeGenerator {
 			$targetSrcFile = "$targetPath/{$objectName}.php";
 			file_put_contents($targetSrcFile, implode("\n", $phpDefinition));
 		}
+	}
+
+	private function cleanUpFolderForGenerator($folder): void {
+		$this->removeDir($folder);
+		mkdir($folder);
 	}
 
 	private function determineType($typeDefinition): array {
