@@ -2,16 +2,16 @@
 
 /** Abbildung verschiedener in der INVOIC angegebenen Rechnungstypen. */
 
-enum NetznutzungRechnungstyp: string {
+enum NetznutzungRechnungstyp {
 
-	case NetznutzungRechnungstyp_0 = 'ABSCHLUSSRECHNUNG';
-	case NetznutzungRechnungstyp_1 = 'ABSCHLAGSRECHNUNG';
-	case NetznutzungRechnungstyp_2 = 'TURNUSRECHNUNG';
-	case NetznutzungRechnungstyp_3 = 'MONATSRECHNUNG';
-	case NetznutzungRechnungstyp_4 = 'WIMRECHNUNG';
-	case NetznutzungRechnungstyp_5 = 'ZWISCHENRECHNUNG';
-	case NetznutzungRechnungstyp_6 = 'INTEGRIERTE_13TE_RECHNUNG';
-	case NetznutzungRechnungstyp_7 = 'ZUSAETZLICHE_13TE_RECHNUNG';
-	case NetznutzungRechnungstyp_8 = 'MEHRMINDERMENGENRECHNUNG';
+	case ABSCHLUSSRECHNUNG;
+	case ABSCHLAGSRECHNUNG;
+	case TURNUSRECHNUNG;
+	case MONATSRECHNUNG;
+	case WIMRECHNUNG;
+	case ZWISCHENRECHNUNG;
+	case INTEGRIERTE_13TE_RECHNUNG;
+	case ZUSAETZLICHE_13TE_RECHNUNG;
+	case MEHRMINDERMENGENRECHNUNG;
 
 }

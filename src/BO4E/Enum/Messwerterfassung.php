@@ -2,9 +2,9 @@
 
 /** Die Messwerterfassung des Zählers */
 
-enum Messwerterfassung: string {
+enum Messwerterfassung {
 
-	case Messwerterfassung_0 = 'FERNAUSLESBAR';
-	case Messwerterfassung_1 = 'MANUELL_AUSGELESENE';
+	case FERNAUSLESBAR;
+	case MANUELL_AUSGELESENE;
 
 }

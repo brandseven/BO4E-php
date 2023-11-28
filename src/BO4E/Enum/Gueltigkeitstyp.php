@@ -2,10 +2,10 @@
 
 /** Übersicht der verschiedenen Gültigkeiten zur Umsetzung von Positiv- bzw. Negativlisten. */
 
-enum Gueltigkeitstyp: string {
+enum Gueltigkeitstyp {
 
-	case Gueltigkeitstyp_0 = 'NUR_IN';
-	case Gueltigkeitstyp_1 = 'NICHT_IN';
-	case Gueltigkeitstyp_2 = 'NUR_IN_KOMBINATION_MIT';
+	case NUR_IN;
+	case NICHT_IN;
+	case NUR_IN_KOMBINATION_MIT;
 
 }

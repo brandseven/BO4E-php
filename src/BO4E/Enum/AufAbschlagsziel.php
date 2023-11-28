@@ -2,13 +2,13 @@
 
 /** Der Preis, auf den sich ein Auf- oder Abschlag bezieht. */
 
-enum AufAbschlagsziel: string {
+enum AufAbschlagsziel {
 
-	case AufAbschlagsziel_0 = 'ARBEITSPREIS_EINTARIF';
-	case AufAbschlagsziel_1 = 'ARBEITSPREIS_HT';
-	case AufAbschlagsziel_2 = 'ARBEITSPREIS_NT';
-	case AufAbschlagsziel_3 = 'ARBEITSPREIS_HT_NT';
-	case AufAbschlagsziel_4 = 'GRUNDPREIS';
-	case AufAbschlagsziel_5 = 'GESAMTPREIS';
+	case ARBEITSPREIS_EINTARIF;
+	case ARBEITSPREIS_HT;
+	case ARBEITSPREIS_NT;
+	case ARBEITSPREIS_HT_NT;
+	case GRUNDPREIS;
+	case GESAMTPREIS;
 
 }

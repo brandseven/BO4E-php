@@ -111,7 +111,7 @@ class JsonToPHPCodeGenerator {
 			// check enum special case
 			$hasToBeStringEnum = false;
 			foreach ($objectDefinition['enum'] as $enum) {
-				if (preg_match('/[^a-zA-Z\d]/', $enum)) {
+				if (preg_match('/[^a-zA-Z_\d]/', $enum)) {
 					$hasToBeStringEnum = true;
 					break;
 				}

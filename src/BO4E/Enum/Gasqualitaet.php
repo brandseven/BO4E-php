@@ -2,9 +2,9 @@
 
 /** Unterscheidung für hoch- und niedrig-kalorisches Gas. */
 
-enum Gasqualitaet: string {
+enum Gasqualitaet {
 
-	case Gasqualitaet_0 = 'H_GAS';
-	case Gasqualitaet_1 = 'L_GAS';
+	case H_GAS;
+	case L_GAS;
 
 }

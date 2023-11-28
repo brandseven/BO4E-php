@@ -2,10 +2,10 @@
 
 /** Angabe, wie eine Menge in Bezug auf einen Wert zu bilden ist. */
 
-enum Mengenoperator: string {
+enum Mengenoperator {
 
-	case Mengenoperator_0 = 'KLEINER_ALS';
-	case Mengenoperator_1 = 'GROESSER_ALS';
-	case Mengenoperator_2 = 'GLEICH';
+	case KLEINER_ALS;
+	case GROESSER_ALS;
+	case GLEICH;
 
 }

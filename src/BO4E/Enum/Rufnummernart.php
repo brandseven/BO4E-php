@@ -2,16 +2,16 @@
 
 /** Abbildung verschiedener Rufnummerntypen. */
 
-enum Rufnummernart: string {
+enum Rufnummernart {
 
-	case Rufnummernart_0 = 'RUF_ZENTRALE';
-	case Rufnummernart_1 = 'FAX_ZENTRALE';
-	case Rufnummernart_2 = 'SAMMELRUF';
-	case Rufnummernart_3 = 'SAMMELFAX';
-	case Rufnummernart_4 = 'ABTEILUNGRUF';
-	case Rufnummernart_5 = 'ABTEILUNGFAX';
-	case Rufnummernart_6 = 'RUF_DURCHWAHL';
-	case Rufnummernart_7 = 'FAX_DURCHWAHL';
-	case Rufnummernart_8 = 'MOBIL_NUMMER';
+	case RUF_ZENTRALE;
+	case FAX_ZENTRALE;
+	case SAMMELRUF;
+	case SAMMELFAX;
+	case ABTEILUNGRUF;
+	case ABTEILUNGFAX;
+	case RUF_DURCHWAHL;
+	case FAX_DURCHWAHL;
+	case MOBIL_NUMMER;
 
 }

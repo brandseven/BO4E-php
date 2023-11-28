@@ -2,10 +2,10 @@
 
 /** Übersicht möglicher Titel, z.B. eines Geschäftspartners. */
 
-enum Titel: string {
+enum Titel {
 
-	case Titel_0 = 'DR';
-	case Titel_1 = 'PROF';
-	case Titel_2 = 'PROF_DR';
+	case DR;
+	case PROF;
+	case PROF_DR;
 
 }
