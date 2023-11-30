@@ -1,15 +1,6 @@
 <?php namespace BO4E\Com;
 
-/**
-Modellierung einer Unterschrift, z.B. für Verträge, Angebote etc.
-
-.. raw:: html
-
-    <object data="../_static/images/bo4e/com/Unterschrift.svg" type="image/svg+xml"></object>
-
-.. HINT::
-    `Unterschrift JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-python/main/json_schemas/com/Unterschrift.json>`_
-*/
+/** for description @see \Base\Unterschrift */
 
 class Unterschrift extends Base\Unterschrift {
 

@@ -99,34 +99,10 @@ class JsonToPHPCodeGenerator {
 				$phpDefinition = [];
 				$phpDefinition[] = "<?php namespace {$nameSpace};";
 				$phpDefinition[] = '';
-				if (isset($objectDefinition['description'])) {
-					$phpDefinition[] = "/**";
-					$phpDefinition[] = "{$objectDefinition['description']}";
-					$phpDefinition[] = "*/";
-					$phpDefinition[] = '';
-				}
+				$phpDefinition[] = "/** for description @see \\Base\\{$objectName} */";
+				$phpDefinition[] = '';
 				$phpDefinition[] = "class {$objectName} extends Base\\{$objectName} {";
 				$phpDefinition[] = '';
-
-				foreach ($objectDefinition['properties'] as $key => $value) {
-//				$default = 'null';
-//				$typeDefinition = current($value['anyOf']);
-//				$determinedType = $this->determineType($typeDefinition);
-//
-//				if (in_array($key, ['_typ', '_version'])) {
-//					if ($key === '_typ') {
-//						$default = "{$determinedType['type']}::{$value['default']}";
-//					} elseif ($key === '_version') {
-//						$default = "'{$value['default']}'";
-//					}
-//				}
-//
-//				if (isset($determinedType['description'])) {
-//					$phpDefinition[] = "\t/** @var {$determinedType['description']} */";
-//				}
-//
-//				$phpDefinition[] = "\tpublic ?{$determinedType['type']} \${$key} = {$default};";
-				}
 
 				$phpDefinition[] = '';
 				$phpDefinition[] = "}";
