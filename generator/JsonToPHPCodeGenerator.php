@@ -99,7 +99,7 @@ class JsonToPHPCodeGenerator {
 				$phpDefinition = [];
 				$phpDefinition[] = "<?php namespace {$nameSpace};";
 				$phpDefinition[] = '';
-				$phpDefinition[] = "/** for description @see \\Base\\{$objectName} */";
+				$phpDefinition[] = "/** for description @see Base\\{$objectName} */";
 				$phpDefinition[] = '';
 				$phpDefinition[] = "class {$objectName} extends Base\\{$objectName} {";
 				$phpDefinition[] = '';
