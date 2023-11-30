@@ -1,5 +1,7 @@
 <?php namespace BO4E\Enum;
 
+/** DO NOT CHANGE THIS FILE - GENERATOR WILL OVERWRITE THIS FILE */
+
 /** Abbildung verschiedener Rechnungstypen zur Kennzeichnung von Rechnungen */
 
 enum Rechnungstyp {

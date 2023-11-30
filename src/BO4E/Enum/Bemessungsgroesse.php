@@ -1,5 +1,7 @@
 <?php namespace BO4E\Enum;
 
+/** DO NOT CHANGE THIS FILE - GENERATOR WILL OVERWRITE THIS FILE */
+
 /** Zur Abbildung von Messgrössen und zur Verwendung in energiewirtschaftlichen Berechnungen. */
 
 enum Bemessungsgroesse {

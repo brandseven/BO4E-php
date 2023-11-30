@@ -1,6 +1,7 @@
 <?php namespace BO4E\Bo;
 
-/** Das allgemeine Modell zur Abbildung von Preisen;
+/**
+Das allgemeine Modell zur Abbildung von Preisen;
 Davon abgeleitet können, über die Zuordnung identifizierender Merkmale, spezielle Preisblatt-Varianten modelliert
 werden.
 
@@ -12,21 +13,10 @@ verschiedenen Anwendungsfälle der Preisblätter dar.
     <object data="../_static/images/bo4e/bo/Preisblatt.svg" type="image/svg+xml"></object>
 
 .. HINT::
-    `Preisblatt JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-python/main/json_schemas/bo/Preisblatt.json>`_ */
+    `Preisblatt JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-python/main/json_schemas/bo/Preisblatt.json>`_
+*/
 
-class Preisblatt {
+class Preisblatt extends Base\Preisblatt {
 
-	public ?string $_id = null;
-	public ?\BO4E\Enum\Typ $_typ = \BO4E\Enum\Typ::PREISBLATT;
-	public ?string $_version = '0.6.1rc14';
-	public ?string $bezeichnung = null;
-	/** @var \BO4E\Com\ExterneReferenz[] */
-	public ?array $externeReferenzen = null;
-	public ?\BO4E\Com\Zeitraum $gueltigkeit = null;
-	public ?\BO4E\Marktteilnehmer $herausgeber = null;
-	/** @var \BO4E\Com\Preisposition[] */
-	public ?array $preispositionen = null;
-	public ?\BO4E\Enum\Preisstatus $preisstatus = null;
-	public ?\BO4E\Enum\Sparte $sparte = null;
 
 }

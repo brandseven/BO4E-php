@@ -1,5 +1,7 @@
 <?php namespace BO4E\Enum;
 
+/** DO NOT CHANGE THIS FILE - GENERATOR WILL OVERWRITE THIS FILE */
+
 /** Klassifizierung der Kriterien für eine regionale Eingrenzung. */
 
 enum Regionskriteriumtyp {

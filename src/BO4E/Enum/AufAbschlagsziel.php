@@ -1,5 +1,7 @@
 <?php namespace BO4E\Enum;
 
+/** DO NOT CHANGE THIS FILE - GENERATOR WILL OVERWRITE THIS FILE */
+
 /** Der Preis, auf den sich ein Auf- oder Abschlag bezieht. */
 
 enum AufAbschlagsziel {

@@ -1,20 +1,17 @@
 <?php namespace BO4E\Com;
 
-/** Enthält die zeitliche Zuordnung eines Ansprechpartners zu Abteilungen und Zuständigkeiten.
+/**
+Enthält die zeitliche Zuordnung eines Ansprechpartners zu Abteilungen und Zuständigkeiten.
 
 .. raw:: html
 
     <object data="../_static/images/bo4e/com/Zustaendigkeit.svg" type="image/svg+xml"></object>
 
 .. HINT::
-    `Zustaendigkeit JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-python/main/json_schemas/com/Zustaendigkeit.json>`_ */
+    `Zustaendigkeit JSON Schema <https://json-schema.app/view/%23?url=https://raw.githubusercontent.com/Hochfrequenz/BO4E-python/main/json_schemas/com/Zustaendigkeit.json>`_
+*/
 
-class Zustaendigkeit {
+class Zustaendigkeit extends Base\Zustaendigkeit {
 
-	public ?string $_id = null;
-	public ?string $_version = '0.6.1rc14';
-	public ?string $abteilung = null;
-	public ?string $jobtitel = null;
-	public ?\BO4E\Enum\Themengebiet $themengebiet = null;
 
 }

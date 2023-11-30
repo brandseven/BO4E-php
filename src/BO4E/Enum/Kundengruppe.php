@@ -1,5 +1,7 @@
 <?php namespace BO4E\Enum;
 
+/** DO NOT CHANGE THIS FILE - GENERATOR WILL OVERWRITE THIS FILE */
+
 /** Kundengruppe für eine Marktlokation (orientiert sich an den Standard-Lastprofilen). */
 
 enum Kundengruppe {

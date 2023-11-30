@@ -1,5 +1,7 @@
 <?php namespace BO4E\Enum;
 
+/** DO NOT CHANGE THIS FILE - GENERATOR WILL OVERWRITE THIS FILE */
+
 /** Auflistung möglicher Netzebenen innerhalb der Energiearten Strom und Gas. */
 
 enum Netzebene {

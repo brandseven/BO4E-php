@@ -1,5 +1,7 @@
 <?php namespace BO4E\Enum;
 
+/** DO NOT CHANGE THIS FILE - GENERATOR WILL OVERWRITE THIS FILE */
+
 /** Voraussetzungen, die erfüllt sein müssen, damit dieser Tarif zur Anwendung kommen kann. */
 
 enum Voraussetzungen {

@@ -41,7 +41,10 @@ class JsonToPHPCodeGenerator {
 	}
 
 	private function generateClasses(string $nameSpace, string $srcPath, string $targetPath) {
-		$this->cleanUpFolderForGenerator($targetPath);
+		if ( ! is_dir($targetPath)) {
+			mkdir($targetPath);
+		}
+		$this->cleanUpFolderForGenerator("{$targetPath}/Base");
 
 		$schemas = glob("{$srcPath}/*.json");
 		foreach ($schemas as $schema) {
@@ -49,10 +52,15 @@ class JsonToPHPCodeGenerator {
 			$objectDefinition = json_decode(file_get_contents($schema), true);
 
 			$phpDefinition = [];
-			$phpDefinition[] = "<?php namespace {$nameSpace};";
+			$phpDefinition[] = "<?php namespace {$nameSpace}\\Base;";
+			$phpDefinition[] = '';
+			$phpDefinition[] = "/** DO NOT CHANGE THIS FILE - GENERATOR WILL OVERWRITE THIS FILE */";
+			$phpDefinition[] = "/** FOR CUSTOM CHANGES USE @see \\{$nameSpace}\\{$objectName} */";
 			$phpDefinition[] = '';
 			if (isset($objectDefinition['description'])) {
-				$phpDefinition[] = "/** {$objectDefinition['description']} */";
+				$phpDefinition[] = "/**";
+				$phpDefinition[] = "{$objectDefinition['description']}";
+				$phpDefinition[] = "*/";
 				$phpDefinition[] = '';
 			}
 			$phpDefinition[] = "class {$objectName} {";
@@ -82,8 +90,51 @@ class JsonToPHPCodeGenerator {
 			$phpDefinition[] = "}";
 			$phpDefinition[] = '';
 
+			$targetSrcBaseFile = "$targetPath/Base/{$objectName}.php";
+			file_put_contents($targetSrcBaseFile, implode("\n", $phpDefinition));
+
+
 			$targetSrcFile = "$targetPath/{$objectName}.php";
-			file_put_contents($targetSrcFile, implode("\n", $phpDefinition));
+			if ( ! file_exists($targetSrcFile)) {
+				$phpDefinition = [];
+				$phpDefinition[] = "<?php namespace {$nameSpace};";
+				$phpDefinition[] = '';
+				if (isset($objectDefinition['description'])) {
+					$phpDefinition[] = "/**";
+					$phpDefinition[] = "{$objectDefinition['description']}";
+					$phpDefinition[] = "*/";
+					$phpDefinition[] = '';
+				}
+				$phpDefinition[] = "class {$objectName} extends Base\\{$objectName} {";
+				$phpDefinition[] = '';
+
+				foreach ($objectDefinition['properties'] as $key => $value) {
+//				$default = 'null';
+//				$typeDefinition = current($value['anyOf']);
+//				$determinedType = $this->determineType($typeDefinition);
+//
+//				if (in_array($key, ['_typ', '_version'])) {
+//					if ($key === '_typ') {
+//						$default = "{$determinedType['type']}::{$value['default']}";
+//					} elseif ($key === '_version') {
+//						$default = "'{$value['default']}'";
+//					}
+//				}
+//
+//				if (isset($determinedType['description'])) {
+//					$phpDefinition[] = "\t/** @var {$determinedType['description']} */";
+//				}
+//
+//				$phpDefinition[] = "\tpublic ?{$determinedType['type']} \${$key} = {$default};";
+				}
+
+				$phpDefinition[] = '';
+				$phpDefinition[] = "}";
+				$phpDefinition[] = '';
+
+				file_put_contents($targetSrcFile, implode("\n", $phpDefinition));
+			}
+
 		}
 	}
 
@@ -97,6 +148,8 @@ class JsonToPHPCodeGenerator {
 
 			$phpDefinition = [];
 			$phpDefinition[] = "<?php namespace {$nameSpace};";
+			$phpDefinition[] = '';
+			$phpDefinition[] = "/** DO NOT CHANGE THIS FILE - GENERATOR WILL OVERWRITE THIS FILE */";
 			$phpDefinition[] = '';
 			if (isset($objectDefinition['description'])) {
 				$phpDefinition[] = "/** {$objectDefinition['description']} */";
