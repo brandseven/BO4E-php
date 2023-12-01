@@ -24,15 +24,15 @@ class Angebot {
 	public ?string $_version = '0.6.1rc14';
 	public ?string $anfragereferenz = null;
 	public ?\Datetime $angebotsdatum = null;
-	public ?\BO4E\Geschaeftspartner $angebotsgeber = null;
-	public ?\BO4E\Geschaeftspartner $angebotsnehmer = null;
+	public ?\BO4E\Bo\Geschaeftspartner $angebotsgeber = null;
+	public ?\BO4E\Bo\Geschaeftspartner $angebotsnehmer = null;
 	public ?string $angebotsnummer = null;
 	public ?\Datetime $bindefrist = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
 	public ?\BO4E\Enum\Sparte $sparte = null;
-	public ?\BO4E\Ansprechpartner $unterzeichnerAngebotsgeber = null;
-	public ?\BO4E\Ansprechpartner $unterzeichnerAngebotsnehmer = null;
+	public ?\BO4E\Bo\Ansprechpartner $unterzeichnerAngebotsgeber = null;
+	public ?\BO4E\Bo\Ansprechpartner $unterzeichnerAngebotsnehmer = null;
 	/** @var \BO4E\Com\Angebotsvariante[] */
 	public ?array $varianten = null;
 

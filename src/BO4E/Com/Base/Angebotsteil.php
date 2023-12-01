@@ -25,7 +25,7 @@ class Angebotsteil {
 	public ?string $anfrageSubreferenz = null;
 	public ?\BO4E\Com\Betrag $gesamtkostenangebotsteil = null;
 	public ?\BO4E\Com\Menge $gesamtmengeangebotsteil = null;
-	/** @var \BO4E\Marktlokation[] */
+	/** @var \BO4E\Bo\Marktlokation[] */
 	public ?array $lieferstellenangebotsteil = null;
 	public ?\BO4E\Com\Zeitraum $lieferzeitraum = null;
 	/** @var \BO4E\Com\Angebotsposition[] */

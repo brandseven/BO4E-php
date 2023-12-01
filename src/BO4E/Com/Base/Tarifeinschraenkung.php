@@ -20,7 +20,7 @@ class Tarifeinschraenkung {
 	public ?string $_version = '0.6.1rc14';
 	/** @var \BO4E\Com\Menge[] */
 	public ?array $einschraenkungleistung = null;
-	/** @var \BO4E\Geraet[] */
+	/** @var \BO4E\Bo\Geraet[] */
 	public ?array $einschraenkungzaehler = null;
 	/** @var \BO4E\Enum\Voraussetzungen[] */
 	public ?array $voraussetzungen = null;

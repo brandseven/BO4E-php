@@ -181,7 +181,7 @@ class JsonToPHPCodeGenerator {
 					return self::BO4E_NAMESPACE_ENUM.'\\';
 				}
 
-				return '';
+				return self::BO4E_NAMESPACE_BO.'\\';
 			};
 
 			return [

@@ -19,7 +19,7 @@ class Tarifkosten {
 	public ?string $_id = null;
 	public ?\BO4E\Enum\Typ $_typ = \BO4E\Enum\Typ::TARIFKOSTEN;
 	public ?string $_version = '0.6.1rc14';
-	public ?\BO4E\Marktteilnehmer $anbieter = null;
+	public ?\BO4E\Bo\Marktteilnehmer $anbieter = null;
 	public ?string $anbietername = null;
 	public ?\Datetime $anwendungVon = null;
 	public ?string $bemerkung = null;
@@ -27,7 +27,7 @@ class Tarifkosten {
 	public ?\BO4E\Com\Energiemix $energiemix = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
-	public ?\BO4E\Kosten $kosten = null;
+	public ?\BO4E\Bo\Kosten $kosten = null;
 	/** @var \BO4E\Enum\Kundentyp[] */
 	public ?array $kundentypen = null;
 	public ?\BO4E\Enum\Registeranzahl $registeranzahl = null;

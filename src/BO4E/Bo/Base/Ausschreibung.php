@@ -20,7 +20,7 @@ class Ausschreibung {
 	public ?\BO4E\Enum\Typ $_typ = \BO4E\Enum\Typ::AUSSCHREIUNG;
 	public ?string $_version = '0.6.1rc14';
 	public ?\BO4E\Com\Zeitraum $abgabefrist = null;
-	public ?\BO4E\Geschaeftspartner $ausschreibender = null;
+	public ?\BO4E\Bo\Geschaeftspartner $ausschreibender = null;
 	public ?\BO4E\Enum\Ausschreibungsportal $ausschreibungportal = null;
 	public ?string $ausschreibungsnummer = null;
 	public ?\BO4E\Enum\Ausschreibungsstatus $ausschreibungsstatus = null;

@@ -23,7 +23,7 @@ class Zaehler {
 	public ?\Datetime $eichungBis = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
-	/** @var \BO4E\Geraet[] */
+	/** @var \BO4E\Bo\Geraet[] */
 	public ?array $geraete = null;
 	public ?boolean $istFernschaltbar = null;
 	public ?\Datetime $letzteEichung = null;
@@ -32,7 +32,7 @@ class Zaehler {
 	public ?\BO4E\Enum\Sparte $sparte = null;
 	public ?\BO4E\Enum\Zaehlerauspraegung $zaehlerauspraegung = null;
 	public ?\BO4E\Enum\Zaehlergroesse $zaehlergroesse = null;
-	public ?\BO4E\Geschaeftspartner $zaehlerhersteller = null;
+	public ?\BO4E\Bo\Geschaeftspartner $zaehlerhersteller = null;
 	public ?number $zaehlerkonstante = null;
 	public ?string $zaehlernummer = null;
 	public ?\BO4E\Enum\Zaehlertyp $zaehlertyp = null;

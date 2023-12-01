@@ -33,8 +33,8 @@ class Vertrag {
 	public ?\Datetime $vertragsende = null;
 	public ?\BO4E\Com\Vertragskonditionen $vertragskonditionen = null;
 	public ?string $vertragsnummer = null;
-	public ?\BO4E\Geschaeftspartner $vertragspartner1 = null;
-	public ?\BO4E\Geschaeftspartner $vertragspartner2 = null;
+	public ?\BO4E\Bo\Geschaeftspartner $vertragspartner1 = null;
+	public ?\BO4E\Bo\Geschaeftspartner $vertragspartner2 = null;
 	public ?\BO4E\Enum\Vertragsstatus $vertragsstatus = null;
 	/** @var \BO4E\Com\Vertragsteil[] */
 	public ?array $vertragsteile = null;

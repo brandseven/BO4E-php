@@ -21,7 +21,7 @@ class Marktlokation {
 	public ?string $_version = '0.6.1rc14';
 	public ?string $bilanzierungsgebiet = null;
 	public ?\BO4E\Enum\Bilanzierungsmethode $bilanzierungsmethode = null;
-	public ?\BO4E\Geschaeftspartner $endkunde = null;
+	public ?\BO4E\Bo\Geschaeftspartner $endkunde = null;
 	public ?\BO4E\Enum\Energierichtung $energierichtung = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;

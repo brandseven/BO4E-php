@@ -24,9 +24,9 @@ class PreisblattDienstleistung {
 	public ?\BO4E\Enum\Bilanzierungsmethode $bilanzierungsmethode = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
-	public ?\BO4E\Geraet $geraetedetails = null;
+	public ?\BO4E\Bo\Geraet $geraetedetails = null;
 	public ?\BO4E\Com\Zeitraum $gueltigkeit = null;
-	public ?\BO4E\Marktteilnehmer $herausgeber = null;
+	public ?\BO4E\Bo\Marktteilnehmer $herausgeber = null;
 	/** @var \BO4E\Enum\Dienstleistungstyp[] */
 	public ?array $inklusiveDienstleistungen = null;
 	/** @var \BO4E\Com\Preisposition[] */

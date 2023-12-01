@@ -22,7 +22,7 @@ class Messlokation {
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
 	public ?\BO4E\Com\Geokoordinaten $geoadresse = null;
-	/** @var \BO4E\Geraet[] */
+	/** @var \BO4E\Bo\Geraet[] */
 	public ?array $geraete = null;
 	public ?string $grundzustaendigerMsbCodenr = null;
 	public ?string $grundzustaendigerMsbimCodenr = null;
@@ -32,7 +32,7 @@ class Messlokation {
 	public ?array $messdienstleistung = null;
 	public ?string $messgebietnr = null;
 	public ?string $messlokationsId = null;
-	/** @var \BO4E\Zaehler[] */
+	/** @var \BO4E\Bo\Zaehler[] */
 	public ?array $messlokationszaehler = null;
 	public ?\BO4E\Enum\Netzebene $netzebeneMessung = null;
 	public ?\BO4E\Enum\Sparte $sparte = null;

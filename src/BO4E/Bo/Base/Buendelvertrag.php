@@ -21,7 +21,7 @@ class Buendelvertrag {
 	public ?\BO4E\Enum\Typ $_typ = \BO4E\Enum\Typ::BUENDELVERTRAG;
 	public ?string $_version = '0.6.1rc14';
 	public ?string $beschreibung = null;
-	/** @var \BO4E\Vertrag[] */
+	/** @var \BO4E\Bo\Vertrag[] */
 	public ?array $einzelvertraege = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
@@ -36,8 +36,8 @@ class Buendelvertrag {
 	/** @var \BO4E\Com\Vertragskonditionen[] */
 	public ?array $vertragskonditionen = null;
 	public ?string $vertragsnummer = null;
-	public ?\BO4E\Geschaeftspartner $vertragspartner1 = null;
-	public ?\BO4E\Geschaeftspartner $vertragspartner2 = null;
+	public ?\BO4E\Bo\Geschaeftspartner $vertragspartner1 = null;
+	public ?\BO4E\Bo\Geschaeftspartner $vertragspartner2 = null;
 	public ?\BO4E\Enum\Vertragsstatus $vertragsstatus = null;
 
 }

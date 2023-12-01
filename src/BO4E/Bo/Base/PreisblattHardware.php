@@ -19,16 +19,16 @@ class PreisblattHardware {
 	public ?string $_id = null;
 	public ?\BO4E\Enum\Typ $_typ = \BO4E\Enum\Typ::PREISBLATTHARDWARE;
 	public ?string $_version = '0.6.1rc14';
-	public ?\BO4E\Geraet $basisgeraet = null;
+	public ?\BO4E\Bo\Geraet $basisgeraet = null;
 	public ?string $bezeichnung = null;
 	public ?\BO4E\Enum\Bilanzierungsmethode $bilanzierungsmethode = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
 	public ?\BO4E\Com\Zeitraum $gueltigkeit = null;
-	public ?\BO4E\Marktteilnehmer $herausgeber = null;
+	public ?\BO4E\Bo\Marktteilnehmer $herausgeber = null;
 	/** @var \BO4E\Enum\Dienstleistungstyp[] */
 	public ?array $inklusiveDienstleistungen = null;
-	/** @var \BO4E\Geraet[] */
+	/** @var \BO4E\Bo\Geraet[] */
 	public ?array $inklusiveGeraete = null;
 	public ?\BO4E\Enum\Netzebene $messebene = null;
 	/** @var \BO4E\Com\Preisposition[] */

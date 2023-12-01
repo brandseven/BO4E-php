@@ -23,7 +23,7 @@ class PreisblattKonzessionsabgabe {
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
 	public ?\BO4E\Com\Zeitraum $gueltigkeit = null;
-	public ?\BO4E\Marktteilnehmer $herausgeber = null;
+	public ?\BO4E\Bo\Marktteilnehmer $herausgeber = null;
 	public ?\BO4E\Enum\KundengruppeKA $kundengruppeKA = null;
 	/** @var \BO4E\Com\Preisposition[] */
 	public ?array $preispositionen = null;

@@ -24,7 +24,7 @@ class Ansprechpartner {
 	public ?string $eMailAdresse = null;
 	/** @var \BO4E\Com\ExterneReferenz[] */
 	public ?array $externeReferenzen = null;
-	public ?\BO4E\Geschaeftspartner $geschaeftspartner = null;
+	public ?\BO4E\Bo\Geschaeftspartner $geschaeftspartner = null;
 	public ?string $individuelleAnrede = null;
 	public ?string $kommentar = null;
 	public ?string $nachname = null;

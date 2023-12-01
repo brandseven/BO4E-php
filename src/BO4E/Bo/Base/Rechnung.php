@@ -28,15 +28,15 @@ class Rechnung {
 	public ?boolean $istOriginal = null;
 	public ?boolean $istSimuliert = null;
 	public ?boolean $istStorno = null;
-	public ?\BO4E\Marktlokation $marktlokation = null;
-	public ?\BO4E\Messlokation $messlokation = null;
+	public ?\BO4E\Bo\Marktlokation $marktlokation = null;
+	public ?\BO4E\Bo\Messlokation $messlokation = null;
 	public ?\BO4E\Enum\NetznutzungRechnungsart $netznutzungrechnungsart = null;
 	public ?\BO4E\Enum\NetznutzungRechnungstyp $netznutzungrechnungstyp = null;
 	public ?string $originalRechnungsnummer = null;
 	public ?\BO4E\Com\Betrag $rabattBrutto = null;
 	public ?\Datetime $rechnungsdatum = null;
-	public ?\BO4E\Geschaeftspartner $rechnungsempfaenger = null;
-	public ?\BO4E\Geschaeftspartner $rechnungsersteller = null;
+	public ?\BO4E\Bo\Geschaeftspartner $rechnungsempfaenger = null;
+	public ?\BO4E\Bo\Geschaeftspartner $rechnungsersteller = null;
 	public ?string $rechnungsnummer = null;
 	public ?\BO4E\Com\Zeitraum $rechnungsperiode = null;
 	/** @var \BO4E\Com\Rechnungsposition[] */

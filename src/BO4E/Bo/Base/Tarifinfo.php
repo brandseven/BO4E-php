@@ -20,7 +20,7 @@ class Tarifinfo {
 	public ?string $_id = null;
 	public ?\BO4E\Enum\Typ $_typ = \BO4E\Enum\Typ::TARIFINFO;
 	public ?string $_version = '0.6.1rc14';
-	public ?\BO4E\Marktteilnehmer $anbieter = null;
+	public ?\BO4E\Bo\Marktteilnehmer $anbieter = null;
 	public ?string $anbietername = null;
 	public ?\Datetime $anwendungVon = null;
 	public ?string $bemerkung = null;
