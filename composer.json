@@ -4,7 +4,9 @@
 	"minimum-stability": "stable",
 	"license": "mit",
 	"require": {
-		"php": ">=8.1",
+		"php": ">=8.1"
+	},
+	"require-dev": {
 		"bo4e/schemas": "^0.1"
 	},
 	"repositories": [
